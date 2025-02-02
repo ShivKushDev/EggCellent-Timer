@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EggCellent Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>EggCellent Timer</h1>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+            </button>
+        </div>
+        <div class="timer-display">
+            <svg class="progress-ring" width="200" height="200">
+                <circle class="progress-ring-circle" cx="100" cy="100" r="90" />
+            </svg>
+            <div class="time">
+                <span class="minutes">00</span>:<span class="seconds">00</span>
+            </div>
+        </div>
+        <div class="egg-types">
+            <button class="egg-btn" data-time="180">
+                <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M126.916 182.341C145.402 178.573 275.553 172.538 281.291 176.839C286.763 180.94 279.285 207.459 277.953 213.236C256.931 304.293 117 290.822 117 188.171" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Runny
+            </button>
+            <button class="egg-btn" data-time="300">
+                <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M512.670296 377.058913m-227.971061 0a227.97106 227.97106 0 1 0 455.942121 0 227.97106 227.97106 0 1 0-455.942121 0Z" fill="currentColor"/>
+                </svg>
+                Soft
+            </button>
+            <button class="egg-btn" data-time="420">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M67.283 96.847c-31.675 10.868-26.284-8.737-53.132-23.014-26.776-14.24-12.708-42.414 18.464-60.401 37.712-21.76 74.573-17.987 66.18 17.987-8.393 35.972-4.946 55.519-31.512 65.428z"/>
+                </svg>
+                Hard
+            </button>
+            <button class="egg-btn" data-time="600">
+                <svg viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M287.981 24c-46.576 0-84.123 30.995-110.656 72.843-24.282 38.299-39.91 86.164-46.189 131.344l-22.781-34.781c-2.22-3.389-6.621-4.584-10.25-2.783l-27.718 13.813-18.125-42.844c-1.29-3.045-4.32-4.982-7.626-4.875-2.778 0.16-5.31 1.615-6.688 4.031-67.29 117.135-34.846 217.969 18.062 248.783 30.118 17.674 69.566 19.807 109.376 2.813 9.424-4.021 18.869-9.188 28.25-15.377 26.518 17.602 59.006 27.031 94.344 27.031 46.35 0 88.253-15.834 117.562-45.688 29.31-29.859 45.642-73.574 41.938-127.406-3.418-49.67-19.258-105.451-46-149.594C374.738 57.171 336.189 24 287.981 24z"/>
+                </svg>
+                Overcooked
+            </button>
+        </div>
+        <button class="control-btn start" disabled>Start</button>
+        <button class="control-btn reset" disabled>Reset</button>
+    </div>
+    <div class="modal" id="alarmModal">
+        <div class="modal-content">
+            <p>Hey! Your eggs are done :)</p>
+            <button class="modal-btn">Got them! Thanks</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <audio id="alarmSound" src="audio/alarm.wav" loop></audio>
+</body>
+</html>
